@@ -62,14 +62,20 @@ nvim/
 2. **Clone this repository**:
 
    ```bash
-   git clone https://github.com/yourusername/nvim-flutter.git ~/.config/nvim
+   git clone git clone https://github.com/Abdulqudduz/nvim-flutter.git ~/.config/nvim-flutter
+
    ```
-3. **Open Neovim** and wait for plugins to sync:
+3. **Rename nvim-flutter to nvim **:
+
+   ```bash
+   mv ~/.config/nvim-flutter ~/.config/nvim
+   ```
+4. **Open Neovim** and wait for plugins to sync:
 
    ```bash
    nvim
    ```
-4. **Install Tree-sitter parsers**:
+5. **Install Tree-sitter parsers**:
 
    ```vim
    :TSInstall dart lua
