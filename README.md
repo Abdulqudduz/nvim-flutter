@@ -1,81 +1,122 @@
-File path: nvim/README.md
+Perfect — your content is solid, it just needs **formatting and polish** to look like the example repo you showed me. Here’s a **refined `README.md`** styled like that:
 
-```markdown
+````markdown
 # 🚀 Flutter Neovim Configuration
 
-A complete Neovim setup optimized for Flutter and Dart development with VS Code-like experience.
+A complete Neovim setup optimized for **Flutter** and **Dart** development — bringing a **VS Code-like experience** inside Neovim.
 
-## 📁 Project Structure
+---
 
-```
+## 📂 Project Structure
 
-nvim/ ├──init.lua          # Main configuration file ├──lazy-lock.json    # Plugin versions lockfile ├──LICENSE           # MIT License ├──README.md         # This file ├──CHEATSHEET.md     # Keybindings reference ├──after/            # Filetype-specific settings │└── ftplugin/ │└── dart.lua  # Dart-specific configuration └──lua/              # Lua modules ├── config/       # Configuration files │   ├── lazy.lua     # Plugin manager setup │   ├── settings.lua # Neovim settings │   ├── keymaps.lua  # Key mappings │   └── folding.lua  # Folding configuration └── plugins/      # Plugin specifications ├── core.lua         # Core plugins ├── flutter-tools.lua # Flutter development ├── lsp.lua          # LSP configuration ├── nvim-cmp.lua     # Autocompletion ├── nvim-tree.lua    # File explorer ├── treesitter.lua   # Syntax highlighting ├── ui.lua           # UI plugins └── bufferline.lua   # Tab management
+```bash
+nvim/
+├── init.lua           # Main configuration file
+├── lazy-lock.json     # Plugin versions lockfile
+├── LICENSE            # MIT License
+├── README.md          # Project documentation
+├── CHEATSHEET.md      # Keybindings reference
+├── after/             # Filetype-specific settings
+│   └── ftplugin/
+│       └── dart.lua   # Dart-specific configuration
+└── lua/               # Lua modules
+    ├── config/        # Configuration files
+    │   ├── lazy.lua       # Plugin manager setup
+    │   ├── settings.lua   # Neovim settings
+    │   ├── keymaps.lua    # Key mappings
+    │   └── folding.lua    # Folding configuration
+    └── plugins/       # Plugin specifications
+        ├── core.lua           # Core plugins
+        ├── flutter-tools.lua  # Flutter development
+        ├── lsp.lua            # LSP configuration
+        ├── nvim-cmp.lua       # Autocompletion
+        ├── nvim-tree.lua      # File explorer
+        ├── treesitter.lua     # Syntax highlighting
+        ├── ui.lua             # UI plugins
+        └── bufferline.lua     # Tab management
+````
 
-```
+---
 
 ## ✨ Features
 
-- **Flutter & Dart LSP** with full IDE capabilities
-- **VS Code-like tabs** with bufferline.nvim
-- **Tree-sitter** for advanced syntax highlighting
-- **Autocompletion** with nvim-cmp
-- **File explorer** with nvim-tree
-- **Hot reload/restart** keybindings
-- **VS Code-like theme** and UI
+* ⚡ **Flutter & Dart LSP** with full IDE capabilities
+* 📑 **VS Code-like tabs** via `bufferline.nvim`
+* 🌳 **Tree-sitter** for advanced syntax highlighting
+* 🤖 **Autocompletion** with `nvim-cmp`
+* 📂 **File explorer** powered by `nvim-tree`
+* 🔥 **Hot reload/restart** with custom keybindings
+* 🎨 **VS Code-inspired UI & theme**
 
-## 🛠️ Installation
+---
 
-### Quick Install
+## 🛠 Installation
 
-1. **Backup your existing config** (if any):
+### Quick Setup
+
+1. **Backup your existing config**:
+
    ```bash
    mv ~/.config/nvim ~/.config/nvim.backup
-```
+   ```
+2. **Clone this repository**:
 
-1. Clone this repository:
    ```bash
    git clone https://github.com/yourusername/nvim-flutter.git ~/.config/nvim
    ```
-2. Start Neovim and wait for plugins to install:
+3. **Open Neovim** and wait for plugins to sync:
+
    ```bash
    nvim
    ```
-3. Install Tree-sitter parsers:
+4. **Install Tree-sitter parsers**:
+
    ```vim
    :TSInstall dart lua
    ```
 
-⌨️ Quick Start
+---
 
-Essential Shortcuts
+## ⌨️ Quick Start
 
-Key Action
-<leader>e Toggle file explorer
-<Tab>/<S-Tab> Next/previous tab
-<leader>fr Flutter hot reload
-<leader>fR Flutter hot restart
-gd Go to definition
-K Show documentation
+### Essential Shortcuts
 
-File Explorer (NvimTree)
+| Key             | Action               |
+| --------------- | -------------------- |
+| `<leader>e`     | Toggle file explorer |
+| `<Tab>/<S-Tab>` | Next/previous tab    |
+| `<leader>fr`    | Flutter hot reload   |
+| `<leader>fR`    | Flutter hot restart  |
+| `gd`            | Go to definition     |
+| `K`             | Show documentation   |
 
-Key Action
-o/<Enter> Open in current tab
-t Open in new tab (switch)
-T Open in new tab (keep focus)
+---
 
-Folding (Dart-specific)
+### File Explorer (NvimTree)
 
-Key Action
-zc Fold current widget
-zo Unfold current widget
-za Toggle fold
-zR Unfold all
-zM Fold all
+| Key         | Action                   |
+| ----------- | ------------------------ |
+| `o`/`Enter` | Open in current tab      |
+| `t`         | Open in new tab (switch) |
+| `T`         | Open in new tab (keep)   |
 
-🎯 Flutter Development
+---
 
-Hot Reload/Restart
+### Folding (Dart-specific)
+
+| Key  | Action              |
+| ---- | ------------------- |
+| `zc` | Fold current widget |
+| `zo` | Unfold widget       |
+| `za` | Toggle fold         |
+| `zR` | Unfold all          |
+| `zM` | Fold all            |
+
+---
+
+## 🎯 Flutter Development
+
+### Hot Reload / Restart
 
 ```vim
 <leader>fr  " Hot reload
@@ -83,92 +124,91 @@ Hot Reload/Restart
 <leader>fd  " Open DevTools
 ```
 
-Dart Commands
+### Dart Commands
 
 ```vim
-:FlutterRun     " Run application
-:FlutterPubGet  " Get dependencies
-:FlutterTest    " Run tests
+:FlutterRun      " Run application
+:FlutterPubGet   " Get dependencies
+:FlutterTest     " Run tests
 ```
 
-⚙️ Configuration
+---
 
-Customize Settings
+## ⚙️ Configuration
 
-Edit these files to customize your setup:
+* `lua/config/settings.lua` – Basic Neovim settings
+* `lua/config/keymaps.lua` – Custom key mappings
+* `lua/config/folding.lua` – Folding behavior
+* `after/ftplugin/dart.lua` – Dart-specific settings
 
-· lua/config/settings.lua - Basic Neovim settings
-· lua/config/keymaps.lua - Key mappings
-· lua/config/folding.lua - Folding behavior
-· after/ftplugin/dart.lua - Dart-specific settings
+Each plugin has its own configuration under `lua/plugins/`:
 
-Plugin Configuration
+* `flutter-tools.lua` – Flutter development
+* `treesitter.lua` – Syntax highlighting
+* `nvim-cmp.lua` – Autocompletion
+* `bufferline.lua` – Tab management
 
-Each plugin has its own configuration file in lua/plugins/:
+---
 
-· flutter-tools.lua - Flutter development
-· treesitter.lua - Syntax highlighting
-· nvim-cmp.lua - Autocompletion
-· bufferline.lua - Tab management
-
-🐛 Troubleshooting
-
-Common Issues
+## 🐛 Troubleshooting
 
 1. Plugins not installing:
+
    ```vim
    :Lazy sync
    ```
-2. Tree-sitter not working:
+2. Tree-sitter issues:
+
    ```vim
    :TSInstall dart
    :TSUpdate
    ```
 3. LSP not starting:
+
    ```vim
    :LspInfo
    ```
-4. Reload configuration:
+4. Reload config:
+
    ```vim
    :source $MYVIMRC
    ```
 
-Get Help
+---
 
-· Press K on any function for documentation
-· Use :cheatsheet to open keybindings reference
-· Check :messages for error logs
+## 📖 Learning Resources
 
-📖 Learning Resources
-
-· :help - Built-in Neovim documentation
-· :Tutor - Interactive Neovim tutorial
-· CHEATSHEET.md - Complete keybindings reference
-
-🤝 Contributing
-
-Feel free to:
-
-· Report bugs and issues
-· Suggest new features
-· Submit pull requests
-· Improve documentation
-
-📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🙏 Acknowledgments
-
-· Neovim team
-· Flutter team
-· All plugin authors and maintainers
-· Neovim community
+* `:help` – Built-in Neovim docs
+* `:Tutor` – Interactive tutorial
+* `CHEATSHEET.md` – Full keybindings reference
 
 ---
 
-Happy Fluttering! 🐦✨
+## 🤝 Contributing
 
-If this configuration helps you, please give it a ⭐ on GitHub!
+Contributions welcome!
 
-```
+* Report bugs
+* Suggest new features
+* Submit PRs
+* Improve docs
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+* Neovim team 🖤
+* Flutter team 🐦
+* Plugin authors & maintainers 🙌
+* Neovim community 🌍
+
+---
+
+⭐ **If this config helps you, please give it a star on GitHub!**
+Happy Fluttering! ✨
