@@ -45,6 +45,12 @@ vim.keymap.set("n", "<leader>fe", ":FlutterEmulators<CR>", { desc = "Flutter Emu
 -- Toggle log window
 vim.keymap.set("n", "<leader>fl", ":FlutterLogToggle<CR>", { desc = "Flutter Logs" })
 
+-- Clear toggle log window
+vim.keymap.set("n", "<leader>fc", ":FlutterLogClear<CR>", { desc = "Clear flutter Logs" })
+
+-- Flutter copy profile url
+vim.keymap.set("n", "<leader>fu", ":FlutterCopyProfilerUrl<CR>", { desc = "Flutter copy profile url" })
+
 -- Toggle outline (widget tree)
 vim.keymap.set("n", "<leader>fo", ":FlutterOutlineToggle<CR>", { desc = "Flutter Outline" })
 

@@ -23,20 +23,6 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true
 vim.opt.showtabline = 2  -- Always show tabline
 
+-- Clipboard integration
+vim.opt.clipboard = "unnamedplus"
 
--- Folding settings
--- vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- vim.opt.foldlevel = 99
--- vim.opt.foldlevelstart = 99
--- vim.opt.foldnestmax = 10
--- vim.opt.foldminlines = 3  -- Increased from 1 to avoid small folds
--- vim.opt.foldtext = "v:lua.vim.treesitter.foldtext()"
-
--- OPTION 2: OR Use manual folding (simpler)
-vim.opt.foldmethod = "manual"
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 99
-
--- Load folding config
-require("config.folding").setup()

@@ -35,18 +35,4 @@ return {
       require("vscode").load()
     end
   },
-
-  -- Better Dart folding
-  {
-    "p00f/nvim-ts-rainbow",  -- Better bracket matching helps folding
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        rainbow = {
-          enable = true,
-          extended_mode = true,
-          max_file_lines = nil,
-        }
-      })
-    end
-}
 }
