@@ -53,29 +53,3 @@ vim.keymap.set("n", "<leader>fu", ":FlutterCopyProfilerUrl<CR>", { desc = "Flutt
 
 -- Toggle outline (widget tree)
 vim.keymap.set("n", "<leader>fo", ":FlutterOutlineToggle<CR>", { desc = "Flutter Outline" })
-
-
--- VS Code-like folding - ADDED THIS SECTION
-vim.keymap.set('n', '<leader>zf', ':set foldmethod=expr<CR>:set foldexpr=v:lua.require("config.folding").dart_foldexpr()<CR>', { desc = 'Enable Dart folding' })
-vim.keymap.set('n', '<leader>zF', ':set foldmethod=indent<CR>', { desc = 'Use indent folding' })
-
--- Quick fold toggles
-vim.keymap.set('n', '<space>', 'za', { desc = 'Toggle fold' })  -- Space to toggle like VS Code
-vim.keymap.set('n', '<C-space>', 'zA', { desc = 'Toggle fold recursively' })
-
--- Folding keybindings (VS Code style)
-vim.keymap.set('n', 'zc', 'zc', { desc = 'Fold current' })
-vim.keymap.set('n', 'zo', 'zo', { desc = 'Unfold current' })
-vim.keymap.set('n', 'za', 'za', { desc = 'Toggle fold' })
-vim.keymap.set('n', 'zR', 'zR', { desc = 'Unfold all' })
-vim.keymap.set('n', 'zM', 'zM', { desc = 'Fold all' })
-vim.keymap.set('n', 'zC', 'zC', { desc = 'Fold all in current' })
-vim.keymap.set('n', 'zO', 'zO', { desc = 'Unfold all in current' })
-
--- Better folding navigation
-vim.keymap.set('n', 'zj', 'zj', { desc = 'Next fold' })
-vim.keymap.set('n', 'zk', 'zk', { desc = 'Previous fold' })
-
--- Visual mode folding
-vim.keymap.set('v', 'zf', 'zf', { desc = 'Create fold from selection' })
-vim.keymap.set('v', 'zd', 'zd', { desc = 'Delete fold in selection' })
