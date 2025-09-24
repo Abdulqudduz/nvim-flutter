@@ -62,7 +62,7 @@ nvim/
 2. **Clone this repository**:
 
    ```bash
-   git clone git clone https://github.com/Abdulqudduz/nvim-flutter.git ~/.config/nvim-flutter
+   git clone https://github.com/Abdulqudduz/nvim-flutter.git ~/.config/nvim-flutter
 
    ```
 3. **Rename nvim-flutter to nvim **:
