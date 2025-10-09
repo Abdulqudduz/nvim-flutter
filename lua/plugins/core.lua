@@ -23,6 +23,22 @@ return {
         vim.cmd('Copilot setup')
       end, 100)
     end
+  },  -- ← ADD THIS COMMA
+  
+  -- Spectre for project-wide search/replace
+  {
+    "nvim-pack/nvim-spectre",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons"
+    },
+    config = function()
+      require("spectre").setup({
+        color_devicons = true,
+        open_cmd = 'vnew',
+        live_update = true, -- auto execute search again when you write any file in vim
+      })
+    end
   }
   
   -- OR Option 2: Advanced Copilot (uncomment this and comment the simple version)

@@ -53,3 +53,25 @@ vim.keymap.set("n", "<leader>fu", ":FlutterCopyProfilerUrl<CR>", { desc = "Flutt
 
 -- Toggle outline (widget tree)
 vim.keymap.set("n", "<leader>fo", ":FlutterOutlineToggle<CR>", { desc = "Flutter Outline" })
+
+-- File/folder operations with path updates
+vim.keymap.set('n', '<leader>re', function()
+  require('telescope.builtin').find_files()
+end, { desc = 'Find files' })
+
+vim.keymap.set('n', '<leader>rE', function()
+  -- This would require a custom function to handle renames
+  require('telescope.extensions.file_browser.file_browser')()
+end, { desc = 'Rename file/folder' })
+
+-- Spectre key mappings
+vim.keymap.set('n', '<leader>ss', '<cmd>lua require("spectre").open()<CR>', { desc = 'Open Spectre search' })
+vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = 'Search current word' })
+vim.keymap.set('v', '<leader>sw', '<cmd>lua require("spectre").open_visual()<CR>', { desc = 'Search selected text' })
+vim.keymap.set('n', '<leader>sf', '<cmd>lua require("spectre").open_file_search()<CR>', { desc = 'Search in current file' })
+
+-- File finding keymaps
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = 'Find files' })
+vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', { desc = 'Live grep' })
+vim.keymap.set('n', '<leader>fb', '<cmd>Telescope file_browser<CR>', { desc = 'File browser' })
+    vim.keymap.set('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', { desc = 'Recent files' })
