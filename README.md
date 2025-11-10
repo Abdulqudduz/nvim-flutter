@@ -1,4 +1,4 @@
-Perfect — your content is solid, it just needs **formatting and polish** to look like the example repo you showed me. Here’s a **refined `README.md`** styled like that:
+A Neovim Config for Flutter Development
 
 ````markdown
 # 🚀 Flutter Neovim Configuration
